@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="../css/main.css" rel="stylesheet">
+    <title>Start</title>
+</head>
+<body>
+    <main class="flex_usual">
+        <section class="center">
+            <div class="input-group">
+                <input type="text" class="form-control password" id="password" placeholder="Password" required>
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn btn-success" for="password" id="submit_password">Submit</button>
+                </div>
+            </div>
+            <div class="input-group_custom flex_usual">
+                <button class="btn btn btn-success btn-md btn-block btn-toggle_pop">Need help ?</button>
+            </div>
+        </section>
+    </main>
+    <section class="pop_up pop_up-medium grey_background flex_usual" style="display: none">
+        <header class="flex_usual flex_end">
+            <button class="btn btn-dark btn-sm btn-block grey_background btn-toggle_pop">
+                <i class="fa fa-close" aria-hidden="true" style="width: 25px;"></i>
+            </button>
+        </header>
+        <main>
+
+        </main>
+        <footer>
+
+        </footer>
+    </section>
+    <div id="backscreen" style="display: none;"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="../js/models/start.js"></script>
+    <script src="../js/utils/helpers.js"></script>
+    <script src="../js/utils/auth.js"></script>
+</body>
+</html>
