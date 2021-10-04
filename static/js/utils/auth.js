@@ -8,18 +8,20 @@ const passwords = {
 }
 
 function validatePassword() {
-    let passphrase = localStorage.getItem("current").replace(/\s/g, "")
+    let passphrase = localStorage?.getItem("current")?.replace(/\s/g, "")
 
-    if(passphrase === "" || !passphrase) {
+    if(passphrase === "" || !passphrase || passphrase === "undefined") {
         passphrase = "c3RhcnQ="
     }
 
     let auth_p = atob(passphrase)
-    console.log(auth_p, passphrase)
     if(location.href.split("/").slice(-1)[0].includes(auth_p)) return
-    
     document.location = `${auth_p}.html`
 } 
+
+function injectInnerHTML(element, text) {
+    element.innerHTML = text
+}
 
 validatePassword()
 
@@ -27,7 +29,7 @@ function verifyPassword(type) {
     let encoded_string;
     if(!type) return alert("?")
 
-    if (password_value.value == passwords[type] || password_value.value === undefined) {
+    if (password_value?.value?.replace(/\s/g, "") == passwords[type] || password_value.value === undefined) {
         alert("Correct password")
 
         switch(localStorage.getItem("current")) {
@@ -49,7 +51,11 @@ function verifyPassword(type) {
             case "dmVyYmluZHVuZ196dW1faGFja2Vy":
                 encoded_string = "c3RhcnQ="
                 break
+            default:
+                encoded_string = "c3RhcnQ="
+                break
         }
+
         localStorage.setItem("current", encoded_string)
         window.location = `${atob(encoded_string)}.html`
     } else {

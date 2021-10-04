@@ -23,18 +23,40 @@
             </div>
         </section>
     </main>
-    <section class="pop_up pop_up-medium grey_background flex_usual" style="display: none">
+    <section class="pop_up pop_up-medium grey_background" style="display: none">
         <header class="flex_usual flex_end">
             <button class="btn btn-dark btn-sm btn-block grey_background btn-toggle_pop">
                 <i class="fa fa-close" aria-hidden="true" style="width: 25px;"></i>
             </button>
         </header>
-        <main>
-
-        </main>
-        <footer>
-
-        </footer>
+        <div class="white_color-opacity center_flex center_text">
+            Die Summe aus den Nullstellen dieser <br> Funktion bilden den Schlüssel für die <br> Entschlüsselung
+        </div>
+        <div class="white_color-opacity box_small center_flex center" style="margin-top: 80px;">
+            f(x) = -ax<sup>2</sup> + bx + c
+        </div>
+        <div class="center_flex center">
+            <div class="flex_usual flex_between" style="margin-top: 55px; width: 130px;">
+                <button class="btn btn-success btn-md btn-block" onclick="loadContent('start_a')">a</button>
+                <button class="btn btn-success btn-md btn-block" onclick="loadContent('start_b')">b</button>
+                <button class="btn btn-success btn-md btn-block" onclick="loadContent('start_c')">c</button>
+            </div>
+        </div>
+    </section>
+    <section class="pop_up pop_up-big grey_background" style="display: none">
+        <header class="flex_usual flex_end">
+            <button class="btn btn-dark btn-sm btn-block grey_background" onclick="closeContent()">
+                <i class="fa fa-close" aria-hidden="true" style="width: 25px;"></i>
+            </button>
+        </header>
+        <div class="white_color-opacity center_flex center_text fat_font full_height flex_horizontal">
+            <span id="start_assignments" ></span>
+            <div class="center_flex">
+                <button class="btn btn-success btn-md btn-block" style="margin-top: 20px;" onclick="showTip()">Tipp?
+                </button>
+                <span id="tip_1" class="fa fa-envelope" style="margin-top: 20px; margin-left: 20px; display: none" ></span>
+            </div>
+        </div>
     </section>
     <div id="backscreen" style="display: none;"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>

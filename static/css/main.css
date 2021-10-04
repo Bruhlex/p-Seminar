@@ -28,6 +28,14 @@ main {
     z-index: 9;
 }
 
+.fat_font {
+    font-size: 20px;
+}
+
+.full_height {
+    height: calc(100% - 70px);
+}
+
 .h1_center {
     text-align: center;
     color: #fff;
@@ -37,16 +45,33 @@ main {
     text-align: center;
 }
 
-.pop_up-medium {
+.pop_up {
+    border-radius: 4px;
+}
+
+.pop_up-medium,
+.pop_up-big {
     position: fixed;
     z-index: 10;
+    top: 50%;
+    left: 50%;
+
+}
+
+.pop_up-medium {
     width: 380px;
     height: 400px;
 
-    top: 50%;
-    left: 50%;
     margin-top: -200px; /* Negative half of height. */
     margin-left: -190px; /* Negative half of width. */
+}
+
+.pop_up-big {
+    width: 900px;
+    height: 550px;
+
+    margin-top: -275px; /* Negative half of height. */
+    margin-left: -450px; /* Negative half of width. */
 }
 
 .pop_up-medium header {
@@ -86,6 +111,10 @@ main {
     background-color: rgb(41, 41, 41);
 }
 
+.white_color-opacity {
+    color: rgba(255, 255, 255, 0.76);
+}
+
 .flex_usual {
     display: flex;
 }
@@ -94,12 +123,23 @@ main {
     justify-content: space-between;
 }
 
+.flex_horizontal {
+    flex-direction: column;
+}
+
+
 .flex_end {
     justify-content: flex-end;
 }
 
 .center{
     margin: auto;
+    align-items: center;
+}
+
+.center_flex {
+    display: flex;
+    justify-content: center;
     align-items: center;
 }
 
@@ -154,4 +194,9 @@ main {
 
 .password{
     width: 280px;
+}
+
+.box_small {
+    width: 150px;
+    height: 50px;
 }
