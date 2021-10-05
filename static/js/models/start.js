@@ -16,10 +16,10 @@ function loadContent(type) {
     toggleElement(POP_UP_BIG)
     switch(type) {
         case "start_a":
-            string = `Der Wert dieser Variable befindet sich nicht hier... <br> Jedoch ist mittlerweile bekannt, <br> dass der Hacker gerne Strecken zu bestimmten Orten nimmt.`
+            string = `Der Wert dieser Variable befindet sich nicht hier... <br> Es ist jedoch bekannt, <br> dass der Hacker gerne mit Strecken zu bestimmten Orten rätselt.`
             break
         case "start_b":
-            string = `Der Hacker hinterlies diese Nachricht hier. <br> Ob sie eventuell hilfreich ist?`
+            string = `Der Hacker hinterlies diese Nachricht hier.<br>[Graphik]<br> Ob sie eventuell hilfreich ist?`
             break
         case "start_c":
             string = `Auch dieser Wert befindet sich nicht hier.  <br> Jedoch hat die Variable etwas mit dem Ausbreitunsspektrum vom Virus zu tun.`
