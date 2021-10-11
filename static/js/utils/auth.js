@@ -6,7 +6,7 @@ const passwords = {
     first_firewall: 31051012152,
     second_firewall: "ALVHYAVHALOLALVHGMVH",
     satellit_zugriff: 1234871933,
-    verbindung_zum_satelliten: 12345,
+    verbindung_zum_satelliten: "0,56*x+2,56",
 }
 
 function validatePassword() {
@@ -60,13 +60,13 @@ async function verifyPassword(type) {
                 encoded_string = "c2F0ZWxsaXRfc2NyZWVu"
                 break
             case "c2F0ZWxsaXRfenVncmlmZg==":
+                alert("The Killswitch has been enabled")
                 encoded_string = "c3RhcnQ="
                 break
             default:
                 encoded_string = "c3RhcnQ="
                 break
         }
-
         localStorage.setItem("current", encoded_string)
         window.location = `${atob(encoded_string)}.html`
     } else {

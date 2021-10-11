@@ -82,7 +82,7 @@ async function showAnimation(input, valid) {
     if(valid) message = RESULT_MESSAGES[1]
     CONSOLE_LOG.innerText += message
 
-    await sleep(100)
+    await sleep(200)
 }
 
 clearTerminal()
