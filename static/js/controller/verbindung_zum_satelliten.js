@@ -1,0 +1,1 @@
+const TYPE = "verbindung_zum_satelliten"

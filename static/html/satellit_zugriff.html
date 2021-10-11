@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="../css/main.css" rel="stylesheet">
+    <title>Start</title>
+</head>
+<body>
+    <main class="flex_usual">
+        <section class="dashboard_left flex_usual flex_horizontal">
+            <h3 class="" style="color: #fff; margin-top: 25px;">
+                Intelsat 17
+            </h3>
+            <div class="dashboard_nav center_flex" style="color: rgba(255, 255, 255, 0.479);">Dashboard</div>
+            <div class="dashboard_nav center_flex" style="color: rgba(255, 255, 255, 0.479);">Misc</div>
+            <div class="dashboard_nav center_flex" style="color: rgba(255, 255, 255, 0.479);">Settings</div>
+            <div class="dashboard_nav center_flex" style="color: rgba(255, 255, 255, 0.479);">Logger</div>
+            <div class="dashboard_nav center_flex" style="color: rgba(255, 255, 255, 0.479);">Engine</div>
+            <div class="dashboard_nav center_flex" style="color: rgba(255, 255, 255, 0.479);">Statistics</div>
+
+        </section>
+
+        <section class="dashboard_right flex_usual flex_horizontal">
+            <div class="dashboard_diagramm"></div>
+
+            <section class="dashboard_down flex_usual">
+                <div class="center_text">
+                    <div class="dashboard_element center_flex">Last Access</div>
+                    <div class="dashboard_element center_flex">91.135.249.40</div>
+                    <div class="dashboard_element center_flex">247.96.60.180</div>
+                    <div class="dashboard_element center_flex">247.96.60.180</div>
+                    <div class="dashboard_element center_flex">11.99.97.34</div>
+                    <div class="dashboard_element center_flex">247.96.60.180</div>
+                    <div class="dashboard_element center_flex">4.96.3.184</div>
+                </div>
+                <div class="center_text">
+                    <div class="dashboard_element center_flex">Toggle Killswitch</div>
+                    <div class="dashboard_element center_flex">
+                        <input type="text" class="form-control password" id="password" placeholder="Password" required>
+                        <button class="btn btn-success btn-md btn-block btn-toggle_pop" style="margin-left: 10px;"><i class="fa fa-question" style="width: 25px;" onclick="showAssignment()"></i></button>
+                        <button class="btn btn-success btn-md btn-block" id="submit_password" style="margin-left: 10px;" onclick="">Disable</button>
+                    </div>
+                    <div class="dashboard_element center_flex">Total infections: 120432</div>
+                    <div class="dashboard_element center_flex">Infect rate: 1.5</div>
+                    <div class="dashboard_element center_flex">Controlled: 120432</div>
+                    <div class="dashboard_element center_flex">Status: Okay</div>
+                    <div class="dashboard_element center_flex">Breaches: None</div>
+                </div>
+            </section>
+        </section>
+    </main>
+    <section class="pop_up pop_up-big grey_background" style="display: none">
+        <header class="flex_usual flex_end">
+            <button class="btn btn-dark btn-sm btn-block grey_background" onclick="closeContent()">
+                <i class="fa fa-close" aria-hidden="true" style="width: 25px;"></i>
+            </button>
+        </header>
+        <div class="flex_usual">
+            <div class="center_text white_color-opacity" style="padding-top: 40px; font-size: 20px; width: 400px; margin-top: 75px;">
+                Der Killswitch des Virus ist mit einem Passwort verriegelt,  <br> sodass man ihn nicht aktivieren kann. <br> 
+                Allerdings kann man das Password <br> knacken, indem man die Schnittpunkte folgender <br> Graphen als
+                Zahlenkombination <br> für das Schloss benutzt:
+            </div>
+            <div class="">
+                <img src="https://cdn.discordapp.com/attachments/798187292455993374/896823380869808148/zhhhj.PNG" style="width: 100%; height: 425px; margin: 30px 0 30px 20px">
+            </div>
+        </div>
+    </section>
+    <div id="backscreen" style="display: none;"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="../js/controller/satellit_zugriff.js"></script>
+    <script src="../js/utils/helpers.js"></script>
+    <script src="../js/utils/auth.js"></script>
+</body>
+</html>

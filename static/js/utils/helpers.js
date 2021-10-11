@@ -1,7 +1,10 @@
 const pop_up  = document.querySelector(".pop_up")
 const help_me = document.querySelectorAll(".btn-toggle_pop")
 const backscreen  = document.querySelector("#backscreen")
-const tip_1 = document.querySelector("#tip_1")
+const TIPS = {
+    "1": document.querySelector("#tip_1"),
+    "2": document.querySelector("#tip_2")
+}
 
 // !function() {
 //      function detectDevTool(allow) {
@@ -27,6 +30,7 @@ const tip_1 = document.querySelector("#tip_1")
 //    }();
 
 function toggleElement(element) {
+    if(!element) return
     let state = element.style.display
     if(state !== "none") element.style.display = "none" 
     else element.style.display = "block"
@@ -39,6 +43,15 @@ help_me.forEach( function (e) {
     })
 } )
 
-function showTip() {
-    toggleElement(tip_1)
+function closeTips() {
+    Object.values(TIPS).forEach( function(e) {
+        e.style.display = "none"
+    } )
 }
+
+function showTip() {
+    closeTips()
+    toggleElement(TIPS[tip_type])
+}
+
+const sleep = t => new Promise(s => setTimeout(s, t));

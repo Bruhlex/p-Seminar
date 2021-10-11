@@ -14,13 +14,40 @@
         <section class="center">
             <h1 class="h1_center" style="margin-bottom: 20px;">2. Firewall</h1>
             <div class="box_background flex_usual">
-
+                <div class="center_flex" style="width: 270px; color: #fff; margin: 40px">
+                    In dieser vereinfachten Simulation wird der Verlauf bestimmter Signale angezeigt. Sie treffen mit 
+                    unterschiedlichen Geschwindigkeiten auf die am Ende liegenden Sensoren. 
+                    Ermittel wie hoch je die Wahrscheinlichkeit ist, das der Sensor getroffen wird.
+                    Mit Hilfe der beiliegenden Umrechnungstabelle kann das Passwort ermittelt werden.
+                </div>
+                <section class="graphic_container">
+                    <div class="position_absolute round_button pos_round_bt"></div>
+                    <div class="position_absolute green_background round_button pos_round_bt-2"></div>
+                    <div class="position_absolute line_horizontal pos_line_hr"></div>
+                    <div class="position_absolute line_vertical pos_line_vr"></div>
+                    <div class="position_absolute line_vertical_short pos_line_vt_st"></div>
+                    <div class="position_absolute line_vertical_short pos_line_vt_st-1"></div>
+                    <div class="position_absolute line_vertical_short pos_line_vt_st-2"></div>
+                    <div class="position_absolute line_vertical_short pos_line_vt_st-3"></div>
+                    <div class="position_absolute line_vertical_short pos_line_vt_st-4"></div>
+                    <div class="position_absolute line_horizontal_long pos_line_hr_lg"></div>
+                    <div class="position_absolute line_horizontal_long pos_line_hr_lg-1"></div>
+                    <div class="position_absolute line_horizontal_long pos_line_hr_lg-2"></div>
+                    <div class="position_absolute line_horizontal_long pos_line_hr_lg-3"></div>
+                    <div class="position_absolute line_horizontal_long pos_line_hr_lg-4"></div>
+                </section>
             </div>
             <div class="bottom_buttons flex_usual flex_between">
-                <input type="text" class="form-control password" id="password" placeholder="Password" required>
+                <section class="flex_usual flex_between bottom_buttons-container" style="width: 440px;">
+                    <input type="text" class="form-control small center_text" id="I_1" placeholder="1" style="width: 80px;">
+                    <input type="text" class="form-control small center_text" id="I_2" placeholder="2" style="width: 80px;">
+                    <input type="text" class="form-control small center_text" id="I_3" placeholder="3" style="width: 80px;">
+                    <input type="text" class="form-control small center_text" id="I_4" placeholder="4" style="width: 80px;">
+                    <input type="text" class="form-control small center_text" id="I_5" placeholder="5" style="width: 80px;">
+                </section>
                 <section class="flex_usual flex_between bottom_buttons-container-4">
-                    <button class="btn btn-success btn-md btn-block" type="submit">
-                        <i class="fa fa-refresh" aria-hidden="true" style="width: 25px;"></i>
+                    <button class="btn btn-success btn-md btn-block" type="submit" onclick="startAnimation()">
+                        <i class="fa fa-play" aria-hidden="true" style="width: 25px;"></i>
                     </button>
                     <button class="btn btn-success btn-md btn-block btn-toggle_pop" type="submit">
                         <i class="fa fa-question" style="width: 25px;"></i>
@@ -35,10 +62,18 @@
             <button class="btn btn-dark btn-sm btn-block grey_background btn-toggle_pop">
                 <i class="fa fa-close" aria-hidden="true" style="width: 25px;"></i>
             </button>
+            <div style="color: #fff; padding-top: 80px;">
+                • prozentuale Wahrscheinlichkeit = relative Häufigkeit in Prozent <br>
+                • „Signal senden“ – Button -> um die Aufgabe zu starten<br>
+                • „von vorne beginnen“ - Button -> um die Aufgabe neu zu starten<br>
+                • erinnert euch an die absolute und relative Häufigkeit aus der siebten Klasse<br>
+                • zur Umrechnungstabelle: z.B. 87% = 8 + 7 = KQ + CS = KQCS<br>
+            </div>
         </header>
     </section>
     <div id="backscreen" style="display: none;"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="../js/controller/second_firewall.js"></script>
     <script src="../js/utils/helpers.js"></script>
     <script src="../js/utils/auth.js"></script>
 </body>
