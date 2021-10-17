@@ -19,7 +19,7 @@ function loadContent(type) {
     let string = ""
     toggleElement(POP_UP_BIG)
     switch(type) {
-        case "start_a":
+        case "start_b":
             tip_type = "1"
             string = `Der Wert dieser Variable befindet sich nicht hier... <br> Es ist jedoch bekannt, <br> dass der Hacker gerne mit Strecken zu bestimmten Orten rätselt. <br> Suche nach einer Strecke und nimm dessen Quersumme als A`
             break
@@ -27,7 +27,7 @@ function loadContent(type) {
             tip_type = "2"
             string = `&#945;`
             break
-        case "start_b":
+        case "start_a":
             tip_type = "1"
             string = `Auch dieser Wert befindet sich nicht hier.  <br> Jedoch hat die Variable etwas mit den momentan infizierten PC's zu tun. <br> Suche nach dieser Zahl und <br> nimm die Quersumme der gerundeten ganzen Zahl für C`
             break
