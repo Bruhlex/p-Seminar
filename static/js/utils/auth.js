@@ -2,11 +2,11 @@ const password_submit = document.querySelector("#submit_password")
 const password_value = document.querySelector("#password")
 
 const passwords = {
-    start: "czggjrjmgy",
+    start: "jgnnqyqtnf",
     first_firewall: 31051012152,
     second_firewall: "ALVHYAVHALOLALVHGMVH",
     satellit_zugriff: 1234871933,
-    verbindung_zum_satelliten: "0,56*x+2,56",
+    verbindung_zum_satelliten: "0,56x+2,56",
 }
 
 function validatePassword() {
@@ -37,7 +37,7 @@ async function verifyPassword(type) {
     }
     
     if(!type) return alert("?")
-    if (input.replace(/\s/g, "") == passwords[type]) valid = true
+    if (input.replace(/\s/g, "").replace("*","") == passwords[type]) valid = true
     
     if(type === "first_firewall") {
         await showAnimation(input, valid)
