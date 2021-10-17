@@ -2,7 +2,7 @@ const password_submit = document.querySelector("#submit_password")
 const password_value = document.querySelector("#password")
 
 const passwords = {
-    start: "jgnnqyqtnf",
+    start: "ifmmpxpsme",
     first_firewall: 31051012152,
     second_firewall: "ALVHYAVHALOLALVHGMVH",
     satellit_zugriff: 1234871933,
