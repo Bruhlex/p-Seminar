@@ -2,7 +2,7 @@ const password_submit = document.querySelector("#submit_password")
 const password_value = document.querySelector("#password")
 
 const passwords = {
-    start: "ifmmpxpsme",
+    start: 0.75,
     first_firewall: 31051012152,
     second_firewall: "ALVHYAVHALOLALVHGMVH",
     satellit_zugriff: 1234871933,
@@ -15,7 +15,7 @@ function validatePassword() {
     if(passphrase === "" || !passphrase || passphrase === "undefined") {
         passphrase = "c3RhcnQ="
     }
-    console.log(passphrase)
+
     let auth_p = atob(passphrase)
     if(location.href.split("/").slice(-1)[0].includes(auth_p)) return
     document.location = `${auth_p}.html`
