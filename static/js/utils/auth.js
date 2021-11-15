@@ -36,7 +36,7 @@ async function verifyPassword(type) {
 
     if(!localStorage?.getItem("verify_firewalls")) {
         localStorage.setItem("verify_firewalls", JSON.stringify([ false, false ]))
-    }
+    } 
 
     if(type === "first_firewall" || type === "second_firewall") {
         input = getInput()

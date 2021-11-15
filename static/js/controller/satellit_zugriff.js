@@ -4,8 +4,7 @@ const TYPE       = "satellit_zugriff"
 localStorage.setItem("current", "c2F0ZWxsaXRfenVncmlmZg==")
 
 function showAssignment() {
-    console.log("Showing assignment")
-    POP_UP_BIG.style.display = "block"
+    toggleElement(POP_UP_BIG)
     toggleElement(backscreen)
 }
 

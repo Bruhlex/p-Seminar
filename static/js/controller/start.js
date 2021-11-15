@@ -5,9 +5,11 @@ const ASSIGNMENT_BOX    = document.querySelector("#start_assignments")
 const TYPE              = "start"
 
 var tip_type = ""
-
-if(localStorage.getItem("current") !== "c3RhcnQ=" && localStorage.getItem("current") !== "" ) console.log("a")
+if(localStorage.getItem("current") === null) localStorage.setItem("current", "c3RhcnQ=")
+else if(localStorage.getItem("current") !== "c3RhcnQ=" && localStorage.getItem("current") !== "" ) console.log("a")
 else localStorage.setItem("current", "c3RhcnQ=")
+
+localStorage.setItem("verify_firewalls", JSON.stringify([ false, false ]))
 
 
 function closeContent() {
