@@ -18,7 +18,9 @@ function validatePassword() {
 
     let auth_p = atob(passphrase)
     if(location.href.split("/").slice(-1)[0].includes(auth_p)) return
-    document.location = `${auth_p}.html`
+    if(auth_p !== "first_firewall" && auth_p !== "second_firewall") {
+        document.location = `${auth_p}.html`
+    }
 } 
 
 function injectInnerHTML(element, text) {
@@ -32,6 +34,10 @@ async function verifyPassword(type) {
     let input = password_value?.value
     let valid = false
 
+    if(!localStorage?.getItem("verify_firewalls")) {
+        localStorage.setItem("verify_firewalls", JSON.stringify([ false, false ]))
+    }
+
     if(type === "first_firewall" || type === "second_firewall") {
         input = getInput()
     }
@@ -43,8 +49,16 @@ async function verifyPassword(type) {
         await showAnimation(input, valid)
     }
 
+
     if (valid) {
         alert("Correct password")
+        if(type === "first_firewall" || type === "second_firewall" ) {
+            let data = JSON.parse(localStorage.getItem("verify_firewalls"))
+            
+            data[type === "first_firewall" ? 0 : 1] = true
+
+            localStorage.setItem("verify_firewalls", JSON.stringify(data))
+        } 
 
         switch(localStorage.getItem("current")) {
             case "c3RhcnQ=":
@@ -57,7 +71,11 @@ async function verifyPassword(type) {
                 encoded_string = "c2Vjb25kX2ZpcmV3YWxs"
                 break
             case "c2Vjb25kX2ZpcmV3YWxs":
-                encoded_string = "c2F0ZWxsaXRfc2NyZWVu"
+                let data = JSON.parse(localStorage.getItem("verify_firewalls"))
+                if(data[0] === true && data[1] === true) {
+                    encoded_string = "c2F0ZWxsaXRfc2NyZWVu"
+                }
+
                 break
             case "c2F0ZWxsaXRfenVncmlmZg==":
                 alert("The Killswitch has been enabled")

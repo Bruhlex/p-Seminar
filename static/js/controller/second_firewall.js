@@ -9,6 +9,8 @@ const INPUTS = {
     5: document.querySelector("#I_5"),
 }
 
+let MUTEX = false
+
 function getInput() {
     return Object.values(INPUTS).reduce((previousValue, currentValue) => previousValue + currentValue.value, "")
 }
@@ -18,6 +20,8 @@ function getRandom(max, min) {
 }
 
 async function startAnimation() {
+    if (mutex) return
+    mutex = true
     let hits = [
         3, 
         7, 
@@ -40,8 +44,7 @@ async function startAnimation() {
         await sleep(delay)
         ANIMATION_BALLS.classList.remove(`line_${num+1}`)
         await sleep(10)
-
     }
+    mutex = false
 }
-// startAnimation()
 
