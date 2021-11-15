@@ -5,7 +5,7 @@ const passwords = {
     start: 0.75,
     first_firewall: 31051012152,
     second_firewall: "ALVHYAVHALOLALVHGMVH",
-    satellit_zugriff: 1234871933,
+    satellit_zugriff: 532570,
     verbindung_zum_satelliten: "0,56x+2,56",
 }
 
