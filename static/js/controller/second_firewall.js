@@ -9,7 +9,7 @@ const INPUTS = {
     5: document.querySelector("#I_5"),
 }
 
-let MUTEX = false
+let mutex = false
 
 function getInput() {
     return Object.values(INPUTS).reduce((previousValue, currentValue) => previousValue + currentValue.value, "")
