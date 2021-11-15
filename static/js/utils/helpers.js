@@ -3,7 +3,8 @@ const help_me = document.querySelectorAll(".btn-toggle_pop")
 const backscreen  = document.querySelector("#backscreen")
 const TIPS = {
     "1": document.querySelector("#tip_1"),
-    "2": document.querySelector("#tip_2")
+    "2": document.querySelector("#tip_2"),
+    "3": document.querySelector("#tip_3")
 }
 
 // !function() {
