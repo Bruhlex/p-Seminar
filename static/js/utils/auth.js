@@ -11,6 +11,7 @@ const passwords = {
 
 function validatePassword() {
     let passphrase = localStorage?.getItem("current")?.replace(/\s/g, "")
+    let firewalls = JSON.parse(localStorage.getItem("verify_firewalls"))
 
     if(passphrase === "" || !passphrase || passphrase === "undefined") {
         passphrase = "c3RhcnQ="
@@ -20,6 +21,10 @@ function validatePassword() {
     if(location.href.split("/").slice(-1)[0].includes(auth_p)) return
     if(auth_p !== "first_firewall" && auth_p !== "second_firewall") {
         document.location = `${auth_p}.html`
+    } else if(firewalls[1] === true && firewalls[0] === false) {
+        document.location = "first_firewall.html"
+    } else if(firewalls[0] === true && firewalls[1] === false) {
+        document.location = "second_firewall.html"
     }
 } 
 
