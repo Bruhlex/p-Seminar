@@ -21,6 +21,9 @@ const MESSAGES = [
     "Applying passphrase",
 ]
 
+const DATA = JSON.parse(localStorage.getItem("verify_firewalls"))
+const BTNREDIRECT = document.querySelector("#btn-redirect")
+
 const RESULT_MESSAGES = [
     "Failed (invalid passphrase)",
     "Successful",
@@ -86,3 +89,9 @@ async function showAnimation(input, valid) {
 }
 
 clearTerminal()
+
+
+
+if(DATA[1] === true) {
+    BTNREDIRECT.style.display = "none"
+}

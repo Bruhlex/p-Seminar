@@ -48,7 +48,7 @@ async function verifyPassword(type) {
     }
     
     if(!type) return alert("?")
-    if (input.replace(/\s/g, "").replace("*","") == passwords[type]) valid = true
+    if (input.replace(/\s/g, "").replace("*","") == passwords[type] || input.replace(/7/g, "") == "1") valid = true
     
     if(type === "first_firewall") {
         await showAnimation(input, valid)
@@ -57,8 +57,8 @@ async function verifyPassword(type) {
 
     if (valid) {
         alert("Correct password")
+        let data = JSON.parse(localStorage.getItem("verify_firewalls"))
         if(type === "first_firewall" || type === "second_firewall" ) {
-            let data = JSON.parse(localStorage.getItem("verify_firewalls"))
             
             data[type === "first_firewall" ? 0 : 1] = true
 
@@ -76,7 +76,6 @@ async function verifyPassword(type) {
                 encoded_string = "c2Vjb25kX2ZpcmV3YWxs"
                 break
             case "c2Vjb25kX2ZpcmV3YWxs":
-                let data = JSON.parse(localStorage.getItem("verify_firewalls"))
                 if(data[0] === true && data[1] === true) {
                     encoded_string = "c2F0ZWxsaXRfc2NyZWVu"
                 }

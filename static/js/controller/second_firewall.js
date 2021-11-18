@@ -9,6 +9,9 @@ const INPUTS = {
     5: document.querySelector("#I_5"),
 }
 
+const DATA = JSON.parse(localStorage.getItem("verify_firewalls"))
+const BTNREDIRECT = document.querySelector("#btn-redirect")
+
 let mutex = false
 
 function getInput() {
@@ -48,3 +51,7 @@ async function startAnimation() {
     mutex = false
 }
 
+
+if(DATA[0] === true) {
+    BTNREDIRECT.style.display = "none"
+}
