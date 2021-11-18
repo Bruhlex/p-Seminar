@@ -88,6 +88,10 @@ async function showAnimation(input, valid) {
     await sleep(200)
 }
 
+function setAuth() {
+    localStorage.setItem("current", "c2Vjb25kX2ZpcmV3YWxs")
+}
+
 clearTerminal()
 
 

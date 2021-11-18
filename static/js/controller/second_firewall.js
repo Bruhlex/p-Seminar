@@ -51,6 +51,9 @@ async function startAnimation() {
     mutex = false
 }
 
+function setAuth() {
+    localStorage.setItem("current", "Zmlyc3RfZmlyZXdhbGw=")
+}
 
 if(DATA[0] === true) {
     BTNREDIRECT.style.display = "none"

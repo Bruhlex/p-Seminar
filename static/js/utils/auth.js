@@ -21,11 +21,15 @@ function validatePassword() {
     if(location.href.split("/").slice(-1)[0].includes(auth_p)) return
     if(auth_p !== "first_firewall" && auth_p !== "second_firewall") {
         document.location = `${auth_p}.html`
-    } else if(firewalls[1] === true && firewalls[0] === false) {
-        document.location = "first_firewall.html"
-    } else if(firewalls[0] === true && firewalls[1] === false) {
-        document.location = "second_firewall.html"
-    }
+    } 
+
+    // if(auth_p === "first_firewall" || auth_p === "second_firewall") {
+    //     let data = JSON.parse(localStorage.getItem("verify_firewalls"))
+    //     if(data[0] === true && data[1] === true) {
+    //         encoded_string = "c2F0ZWxsaXRfc2NyZWVu"
+    //         document.location = `satellit_screen.html`
+    //     }
+    // } 
 } 
 
 function injectInnerHTML(element, text) {
@@ -54,7 +58,6 @@ async function verifyPassword(type) {
         await showAnimation(input, valid)
     }
 
-
     if (valid) {
         alert("Correct password")
         let data = JSON.parse(localStorage.getItem("verify_firewalls"))
@@ -73,12 +76,18 @@ async function verifyPassword(type) {
                 encoded_string = "Zmlyc3RfZmlyZXdhbGw="
                 break
             case "Zmlyc3RfZmlyZXdhbGw=":
-                encoded_string = "c2Vjb25kX2ZpcmV3YWxs"
+                if(data[0] === true && data[1] === true) {
+                    encoded_string = "c2F0ZWxsaXRfc2NyZWVu"
+                } else {
+                    encoded_string = "c2Vjb25kX2ZpcmV3YWxs"
+                }
+
                 break
             case "c2Vjb25kX2ZpcmV3YWxs":
                 if(data[0] === true && data[1] === true) {
                     encoded_string = "c2F0ZWxsaXRfc2NyZWVu"
                 }
+
                 if(data[1] === true && data[0] === false) {
                     encoded_string = "Zmlyc3RfZmlyZXdhbGw="
                 }
@@ -93,6 +102,7 @@ async function verifyPassword(type) {
                 break
         }
         localStorage.setItem("current", encoded_string)
+        alert(atob(encoded_string))
         window.location = `${atob(encoded_string)}.html`
     } else {
         alert("Wrong password")
