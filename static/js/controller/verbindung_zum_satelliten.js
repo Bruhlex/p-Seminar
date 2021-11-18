@@ -7,8 +7,13 @@ function playAudio() {
     if(MUTEX) return
 
     MUTEX = true
-    const AUDIO = new Audio('../../assets/sounds/GesprachGPOHacker_2.mp3');
-    AUDIO.play();
+    // const AUDIO = new Audio('../../assets/sounds/GesprachGPOHacker_2.mp3');
+    // AUDIO.play();
+
+    var sound = new Howl({
+        src: ['../../assets/sounds/GesprachGPOHacker_2.mp3']
+      });
+    sound.play();
     toggleElement(backscreen)
     toggleElement(AudioButton)
 }

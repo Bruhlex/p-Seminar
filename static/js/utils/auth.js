@@ -4,14 +4,14 @@ const password_value = document.querySelector("#password")
 const passwords = {
     start: "0,75",
     first_firewall: 31051012152,
-    second_firewall: "ALVHYAVHALOLALVHGMVH",
+    second_firewall: "AVYVALAVGV",
     satellit_zugriff: 532570,
     verbindung_zum_satelliten: "0,56x+2,56",
 }
 
 function validatePassword() {
     let passphrase = localStorage?.getItem("current")?.replace(/\s/g, "")
-    let firewalls = JSON.parse(localStorage.getItem("verify_firewalls"))
+    // let firewalls = JSON.parse(localStorage.getItem("verify_firewalls"))
 
     if(passphrase === "" || !passphrase || passphrase === "undefined") {
         passphrase = "c3RhcnQ="
@@ -102,7 +102,6 @@ async function verifyPassword(type) {
                 break
         }
         localStorage.setItem("current", encoded_string)
-        alert(atob(encoded_string))
         window.location = `${atob(encoded_string)}.html`
     } else {
         alert("Wrong password")

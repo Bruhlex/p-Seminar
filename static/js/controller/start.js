@@ -23,7 +23,7 @@ function loadContent(type) {
     switch(type) {
         case "start_b":
             tip_type = "1"
-            string = `Der Wert dieser Variable befindet sich nicht hier... <br> Es ist jedoch bekannt, <br> dass der Hacker gerne mit Strecken zu bestimmten Orten rätselt. <br> Suche nach einer ganzen Strecke und nimm die Quersumme der gerundeten ganzen Zahl als "b". `
+            string = `Auch der Wert dieser Variable befindet sich nicht hier... <br> Es ist jedoch bekannt, <br> dass der Hacker gerne mit Strecken zu bestimmten Orten rätselt. <br> Suche nach einer ganzen Strecke und nimm die Quersumme der gerundeten ganzen Zahl als "b". `
             break
         case "start_c":
             tip_type = "3"
@@ -31,7 +31,7 @@ function loadContent(type) {
             break
         case "start_a":
             tip_type = "2"
-            string = `Auch dieser Wert befindet sich nicht hier.  <br> Jedoch hat die Variable etwas mit den momentan infizierten PC's zu tun. <br> Suche nach dieser Zahl und <br> nimm die Quersumme der gerundeten ganzen Zahl für "a". <br> Es wird nach einer ganzen Strecke zu dem Ort gesucht`
+            string = `Dieser Wert befindet sich nicht hier.  <br> Jedoch hat die Variable etwas mit den momentan infizierten PC's zu tun. <br> Suche nach dieser Zahl und <br> nimm die Quersumme der gerundeten ganzen Zahl für "a". <br> Es wird nach einer ganzen Strecke zu dem Ort gesucht`
             break
         default:
     }
