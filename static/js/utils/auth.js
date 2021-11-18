@@ -75,6 +75,9 @@ async function verifyPassword(type) {
                 if(data[0] === true && data[1] === true) {
                     encoded_string = "c2F0ZWxsaXRfc2NyZWVu"
                 }
+                if(data[1] === true && data[0] === false) {
+                    encoded_string = "Zmlyc3RfZmlyZXdhbGw="
+                }
 
                 break
             case "c2F0ZWxsaXRfenVncmlmZg==":
