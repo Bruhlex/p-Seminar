@@ -37,7 +37,7 @@ PlayAudio.addEventListener("click", function(){
 
     // later on when you actually want to play a sound at any point without user interaction
     // const AUDIO = new Audio('../../assets/sounds/GesprachGPOHacker_2.mp3');
-    AUDIO.play();
+    soundEffect.play();
     toggleElement(backscreen)
     toggleElement(AudioButton)
 } )
