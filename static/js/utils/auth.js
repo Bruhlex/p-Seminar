@@ -3,7 +3,7 @@ const password_value = document.querySelector("#password")
 
 const passwords = {
     start: "0,75",
-    first_firewall: 31051012152,
+    first_firewall: 31051112152,
     second_firewall: "AVYVALAVGV",
     satellit_zugriff: 532570,
     verbindung_zum_satelliten: "0,56x+2,56",
