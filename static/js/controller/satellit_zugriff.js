@@ -1,4 +1,6 @@
 const POP_UP_BIG = document.querySelector(".pop_up-big")
+const POP_UP_BTN = document.querySelectorAll(".btn-toggle_pop-2")
+const POP_UP_TIPS = document.querySelector("#pop_up-tips")
 const REMAINING_TIME = document.querySelector("#dashboard_timer")
 const KILLSWITCH = document.querySelector("#dashboard_killswitch")
 const TOINFECT = document.querySelector("#dashboard_toinfect")
@@ -38,7 +40,7 @@ function startTimer(minutesLeft, secondsLeft) {
             alert("Time is up - All Computers are infected")
         }
 
-        REMAINING_TIME.innerText = `${minutesLeft}:${secondsLeft}`
+        REMAINING_TIME.innerText = `${minutesLeft}:${secondsLeft > 9 ? secondsLeft : "0" + secondsLeft}`
 
         TOINFECT.innerText = Math.floor(infectedLeft * 0.99999999)
     } , 999)
@@ -67,3 +69,9 @@ window.onload = function() {
     
     startTimer(minutesLeft, secondsLeft)
 }
+
+POP_UP_BTN.forEach( function (e) {
+    e.addEventListener("click", function () {
+        toggleElement(POP_UP_TIPS)
+    })
+} )

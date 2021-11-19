@@ -74,6 +74,8 @@ main {
 
     margin-top: -200px; /* Negative half of height. */
     margin-left: -190px; /* Negative half of width. */
+
+    box-shadow: 0 0 12px rgb(24, 24, 24);
 }
 
 .pop_up-big {
