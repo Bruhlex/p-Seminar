@@ -53,7 +53,7 @@
                         <i class="fa fa-play" aria-hidden="true" style="width: 25px;"></i>
                     </button>
                     <button class="btn btn-success btn-md btn-block btn-toggle_pop" type="submit">
-                        <i class="fa fa-question" style="width: 25px;"></i>
+                        Tips
                     </button>
                     <button class="btn btn-success btn-md btn-block" type="submit" id="submit_password"> Submit</button>
                 </section>
@@ -65,16 +65,19 @@
             <button class="btn btn-dark btn-sm btn-block grey_background btn-toggle_pop">
                 <i class="fa fa-close" aria-hidden="true" style="width: 25px;"></i>
             </button>
-            <div style="color: #fff; padding-top: 60px;">
-                • grüne Punkte: Signale <br>
-                • graue Striche am Ende: Sensor  <br>
-                • Passwortfelder von oben nach unten: nummeriert von 1-5  <br>
-                • play-button: um die Animation zu starten <br>
-                • von neu zu starten: Animation durchlaufen lassen, paar Sekunden warten & wieder den play-button drücken<br>
-                • erinnert euch an die absolute und relative Häufigkeit aus der 7.Klasse<br>
-                • zur Umrechnungstabelle: z.B. 87% = 8 + 7 = K + C = KC<br>
-            </div>
         </header>
+        <ul style="color: #fff; padding-left: 43px" class="pop_up-tips">
+            <li style="display: block;"> • grüne Punkte: Signale</li>
+            <li style="display: none;">• graue Striche am Ende: Sensor</li>
+            <li style="display: none;">• Passwortfelder von oben nach unten: nummeriert von 1-5 </li>
+            <li style="display: none;">• play-button: um die Animation zu starten</li>
+            <li style="display: none;">• von neu zu starten: Animation durchlaufen lassen, paar Sekunden warten & wieder den play-button drücken</li>
+            <li style="display: none;">• erinnert euch an die absolute und relative Häufigkeit aus der 7.Klasse</li>
+            <li style="display: none;">• zur Umrechnungstabelle: z.B. 87% = 8 + 7 = K + C = KC</li>
+        </ul>
+        <button class="btn btn-success btn-md btn-block" style="margin-left:140px" id="more-tips">
+        More Tips
+        </button>
     </section>
     <div id="backscreen" style="display: none;"></div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>

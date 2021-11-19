@@ -24,7 +24,7 @@
                 <input type="text" class="form-control password" id="password" placeholder="m*x + t" required>
                 <section class="flex_usual flex_between bottom_buttons-container-5" style="width: 150px;">
                     <button class="btn btn-success btn-md btn-block btn-toggle_pop" type="submit">
-                        <i class="fa fa-question" style="width: 25px;"></i>
+                        Tips
                     </button>
                     <button class="btn btn-success btn-md btn-block" type="submit" id="submit_password"> Submit</button>
                 </section>
@@ -42,11 +42,16 @@
                 <i class="fa fa-close" aria-hidden="true" style="width: 25px;"></i>
             </button>
         </header>
-        <div class="white_color-opacity center_flex center_text"  style="height: calc(100% - 100px);">
-            - Finde die Parabelfunktion durch den Scheitel <br> und einen markanten Punkt heraus<br> 
-            - Zeichne eine möglichst lange Gerade durch die <br> Station und den Satelliten
-            - Finde die Geradengleichung durch den <br> Satellitenpunkt und den markanten Punkt <br> (-1/2) heraus
-        </div>
+        <ul style="color: #fff; padding-left: 43px" class="pop_up-tips">
+            <li style="display: block;"> • Finde die Parabelfunktion durch den Scheitel und einen markanten Punkt heraus</li>
+            <li style="display: none;">• Zeichne eine möglichst lange Gerade durch die Station und den Satelliten</li>
+            <li style="display: none;">• Finde die Geradengleichung durch den Satellitenpunkt und den markanten Punkt (-1/2) heraus <br>
+                <img src="../../assets/img/yakob_skizze.png" style="width: 120px; height: 110px; margin-top: 5px; margin-left: 84px;">
+            </li>
+        </ul>
+        <button class="btn btn-success btn-md btn-block" style="margin-left:140px" id="more-tips">
+            More tips
+        </button>
     </section>
     <div id="audio_button">
         <button class="btn btn-success btn-md btn-block" type="submit" id="play_audio">

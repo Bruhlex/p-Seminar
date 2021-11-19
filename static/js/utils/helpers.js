@@ -1,6 +1,7 @@
 const pop_up  = document.querySelector(".pop_up")
 const help_me = document.querySelectorAll(".btn-toggle_pop")
 const backscreen  = document.querySelector("#backscreen")
+const button_expand = document.querySelector("#more-tips")
 const TIPS = {
     "1": document.querySelector("#tip_1"),
     "2": document.querySelector("#tip_2"),
@@ -54,5 +55,18 @@ function showTip() {
     closeTips()
     toggleElement(TIPS[tip_type])
 }
+
+button_expand && button_expand.addEventListener("click", function() {
+    let tipSection = document.querySelector(".pop_up-tips").children
+    console.log("asd")
+    for(let tip of tipSection) {
+        if(tip.style.display === "none") {
+            tip.style.display = "block"
+            return
+        }
+    }
+
+    alert("Out of tips")
+})
 
 const sleep = t => new Promise(s => setTimeout(s, t));

@@ -96,7 +96,7 @@ main {
 }
 
 .pop_up-tips li {
-    visibility: hidden;
+    display: none;
 }
 
 #audio_button {
@@ -209,7 +209,7 @@ main {
 }
 
 .bottom_buttons-container-4{
-    width: 200px;
+    width: 220px;
 }
 
 .bottom_buttons-container-5 {
