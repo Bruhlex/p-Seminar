@@ -95,6 +95,10 @@ main {
     height: 40px;
 }
 
+.pop_up-tips li {
+    visibility: hidden;
+}
+
 #audio_button {
     position: absolute;
     z-index: 10;
