@@ -57,7 +57,7 @@ async function verifyPassword(type) {
     }
     
     if(!type) return alert("?")
-    if (input.replace(/\s/g, "").replace("*","") == passwords[type] || input.replace(/7/g, "") == "1") valid = true
+    if (input.replace(/\s/g, "").replace("*","") == passwords[type]) valid = true
     
     if(input === "reset_1234") {
         localStorage.removeItem("current")
@@ -112,6 +112,7 @@ async function verifyPassword(type) {
                 break
             case "c2F0ZWxsaXRfenVncmlmZg==":
                 alert("The Killswitch has been enabled")
+                alert("You've made it - But who is the Hacker?")
 
                 localStorage.setItem("current", "lmaofinished")
                 return toggleKillSwitch()
