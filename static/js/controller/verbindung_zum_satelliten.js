@@ -27,4 +27,9 @@ window.onload = function () {
     toggleElement()
 }
 
-PlayAudio.addEventListener("click", playAudio)
+function toggleElements() {
+    toggleElement(backscreen)
+    toggleElement(AudioButton)
+}
+
+//PlayAudio.addEventListener("click", playAudio)
