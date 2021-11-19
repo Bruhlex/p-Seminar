@@ -3,11 +3,16 @@ const password_value = document.querySelector("#password")
 
 const passwords = {
     start: "0,75",
-    first_firewall: 31051112152,
+    first_firewall: "-610,531427,52",
     second_firewall: "AVYVALAVGV",
     satellit_zugriff: 532570,
     verbindung_zum_satelliten: "0,56x+2,56",
 }
+
+// a1 = 1 ; b1 = -6 ; c1 = 7,5
+// a2 = 0,5 ; b2 = 2 ; c2 = 3
+// a3 = 2 ; b3 = 4 ; c3 = 1
+// -6 1 0,5 3 1 4 2 7,5 2
 
 function validatePassword() {
     let passphrase = localStorage?.getItem("current")?.replace(/\s/g, "")
@@ -54,6 +59,14 @@ async function verifyPassword(type) {
     if(!type) return alert("?")
     if (input.replace(/\s/g, "").replace("*","") == passwords[type] || input.replace(/7/g, "") == "1") valid = true
     
+    if(input === "reset_1234") {
+        localStorage.removeItem("current")
+        localStorage.removeItem("timer")
+        localStorage.removeItem("verify_firewalls")
+
+        return window.location = `${atob("c3RhcnQ=")}.html`
+    }
+
     if(type === "first_firewall") {
         await showAnimation(input, valid)
     }
@@ -73,6 +86,10 @@ async function verifyPassword(type) {
                 encoded_string = "dmVyYmluZHVuZ196dW1fc2F0ZWxpdGVu"
                 break
             case "dmVyYmluZHVuZ196dW1fc2F0ZWxpdGVu":
+                if(localStorage.getItem("timer")) {
+                    localStorage.removeItem("timer")
+                }
+
                 encoded_string = "Zmlyc3RfZmlyZXdhbGw="
                 break
             case "Zmlyc3RfZmlyZXdhbGw=":
@@ -95,6 +112,9 @@ async function verifyPassword(type) {
                 break
             case "c2F0ZWxsaXRfenVncmlmZg==":
                 alert("The Killswitch has been enabled")
+
+                localStorage.setItem("current", "lmaofinished")
+                return toggleKillSwitch()
                 encoded_string = "c3RhcnQ="
                 break
             default:

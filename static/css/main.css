@@ -401,6 +401,7 @@ main {
     align-content: center;
     justify-content: center;
     margin-top: 40px;
+    align-items: center;
 }
 
 .dashboard_nav {
@@ -431,6 +432,22 @@ main {
     height: 60px;
     border-radius: 6px;
     margin-bottom: 15px;
+}
+
+.dashboard_header {
+    color: white;
+    width: 200px;
+    height: min-content;
+}
+
+.dashboard_header header {
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.dashboard_header div {
+    font-size: 1.5em;
+    text-align: center;
 }
 
 @keyframes line_1 {
