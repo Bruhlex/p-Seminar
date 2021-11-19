@@ -42,7 +42,7 @@ function startTimer(minutesLeft, secondsLeft) {
 
         REMAINING_TIME.innerText = `${minutesLeft}:${secondsLeft > 9 ? secondsLeft : "0" + secondsLeft}`
 
-        TOINFECT.innerText = Math.floor(infectedLeft * 0.99999999)
+        TOINFECT.innerText = Math.floor(infectedLeft * 0.988)
     } , 999)
 }
 
