@@ -31,7 +31,7 @@ function loadContent(type) {
             break
         case "start_a":
             tip_type = "2"
-            string = `Dieser Wert befindet sich nicht hier.  <br> Jedoch hat die Variable etwas mit den momentan infizierten PC's zu tun. <br> Suche nach dieser Zahl und <br> nimm die Quersumme der gerundeten ganzen Zahl für "a". <br> Es wird nach einer ganzen Strecke zu dem Ort gesucht`
+            string = `Dieser Wert befindet sich nicht hier.  <br> Jedoch hat die Variable etwas mit den momentan infizierten PC's zu tun. <br> Suche nach dieser Zahl und <br> nimm die Quersumme der gerundeten ganzen Zahl für "a". <br>`
             break
         default:
     }
